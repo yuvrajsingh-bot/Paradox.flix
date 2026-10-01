@@ -61,7 +61,7 @@ const movies = [
     {
         title: "Titanic",
         category: "movie",
-        videoId: "CHekzSiZcwY",
+        videoId: "avdecCaZb2A",
         image: "https://m.media-amazon.com/images/I/811lT7khIrL._AC_UF894,1000_QL80_.jpg",
         desc: "A young aristocrat falls in love with an artist aboard the Titanic.",
         cast: [
