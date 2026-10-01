@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ParadoxFlix</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="navbar">
+        <h1 class="logo">ParadoxFlix</h1>
+        <ul class="nav-links">
+            <li><a href="#" onclick="filterMovies('all')">Home</a></li>
+            <li><a href="#" onclick="filterMovies('movie')">Movies</a></li>
+            <li><a href="#" onclick="filterMovies('series')">Series</a></li>
+        </ul>
+        <div class="nav-right">
+            <input type="text" id="searchInput" placeholder="Search title..." onkeyup="searchMovies()">
+            <button id="signInBtn" onclick="toggleSignIn()">Sign In</button>
+        </div>
+    </div>
+
+  
+    <div class="hero">
+        <h2>Welcome to ParadoxFlix</h2>
+        <p>Your favorite movies and web series in one place.</p>
+    </div>
+    <div class="container">
+        <h2>COLLECTION</h2>
+        <div class="movie-grid" id="movieGrid">
+        </div>
+    </div>
+    <div id="authModal" class="modal" style="display:none;">
+        <div class="modal-content">
+            <h3>Sign In / Login</h3><br>
+            <input type="email" id="email" placeholder="Enter Email" class="input-field"><br><br>
+            <input type="password" id="password" placeholder="Enter Password" class="input-field"><br><br>
+            <button onclick="loginUser()" class="btn">Login</button>
+            <button onclick="closeModal('authModal')" class="btn-cancel">Cancel</button>
+        </div>
+    </div>
+
+    <div id="playerModal" class="modal" style="display:none;">
+        <div class="modal-content player-modal-content">
+            <div class="iframe-container" id="iframeContainer"></div><br>
+            <button onclick="closePlayer()" class="btn-cancel">Close Video</button>
+        </div>
+    </div>
+    <div id="infoModal" class="modal" style="display:none;">
+        <div class="modal-content info-modal-content">
+            <h2 id="infoTitle"></h2>
+            <p id="infoDesc"></p>
+            <h3>Main Cast</h3>
+            <div class="cast-grid" id="castGrid"></div><br>
+            <button onclick="closeModal('infoModal')" class="btn-cancel">Close</button>
+        </div>
+    </div>
+    <div class="footer">
+        <p>ParadoxFlix | BCA Student Project |Yuvraj Daksh Naman Yagya</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
